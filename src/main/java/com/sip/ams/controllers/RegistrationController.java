@@ -42,6 +42,7 @@ public class RegistrationController {
 
 	    Role userRole = roleRepository.findByRole(user.getTemp()); 
 		user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
+		user.setPicture("user1.png");
 
 		// si on veut donner le role User à tout le monde
 		//user.setRoles(new HashSet<Role>(Arrays.asList(new Role("User"))));

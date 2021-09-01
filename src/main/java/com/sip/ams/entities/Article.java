@@ -24,11 +24,22 @@ private float price;
 @Column(name = "picture")
 private String picture;
 public Article() {}
-public Article(String label, float price, String picture) {
+public Article(String label, float price, Provider provider, String picture) {
 this.price = price;
 this.label = label;
+this.provider = provider;
 this.picture = picture;
 }
+public Article(String label, float price,String picture) {
+this.price = price;
+this.label = label;
+
+this.picture = picture;
+
+}
+
+
+
 public void setId(long id) {
 this.id = id;
 }
